@@ -1,8 +1,3 @@
-// Shows all the students in a table (the READ part of CRUD).
-// Each row has an Edit button and a Delete button.
-
-// The form used to ADD a new student or EDIT an existing one.
-// It does not keep any data itself. Everything comes from App.jsx as "props".
 
 const courses = ['React', 'JavaScript', 'Python', 'Java']
 
@@ -47,7 +42,7 @@ function StudentForm({ formData, isEditing, error, onChange, onSubmit, onCancel 
           </select>
         </label>
 
-        {/* Show the error message only when there is one */}
+        {}
         {error && <p className="form-error">{error}</p>}
 
         <div className="form-buttons">
@@ -55,7 +50,7 @@ function StudentForm({ formData, isEditing, error, onChange, onSubmit, onCancel 
             {isEditing ? 'Update student' : 'Add student'}
           </button>
 
-          {/* The Cancel button appears only while editing */}
+          {}
           {isEditing && (
             <button type="button" className="btn" onClick={onCancel}>
               Cancel

@@ -1,7 +1,3 @@
-// Shows all the students in a table (the READ part of CRUD).
-
-// Shows all the students in a table (the READ part of CRUD).
-// Each row has an Edit button and a Delete button.
 
 function StudentList({ students, editId, onEdit, onDelete }) {
   return (
