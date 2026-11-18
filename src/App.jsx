@@ -70,10 +70,22 @@ function App() {
   }
 
   function handleEdit(student) {
-    setEditId(student.id)
-    setFormData({ name: student.name, email: student.email, course: student.course })
-    setError('')
-  }
+  setEditId(student.id)
+
+  setFormData({
+    name: student.name,
+    email: student.email,
+    course: student.course,
+  })
+
+  setError('')
+
+  window.history.pushState(
+    {},
+    '',
+    `?id=${student.id}`
+  )
+}
 
  function handleDelete(id) {
     const confirmed = window.confirm('Are you sure you want to delete this student?')
